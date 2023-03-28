@@ -36,6 +36,7 @@ export class Badges extends LitElement{
         return css`
         :host {
             display: block;
+            align-items: center;
         }
         .wrapper {
             width: 400px;
@@ -60,3 +61,5 @@ export class Badges extends LitElement{
     }
 }
 customElements.define(Badges.tag, Badges);
+
+

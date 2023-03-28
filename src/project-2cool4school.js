@@ -53,6 +53,7 @@ class Project2cool4school extends LitElement {
 
   render() {
     return html`
+    <main>
         <div class="badge">
           <details>
             <summary class="collapse-card"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
@@ -69,6 +70,7 @@ class Project2cool4school extends LitElement {
             <p>Approximate time to complete: </p> ${this.time}
           </details>
         </div>
+        </main>
     `;
   }
 }
