@@ -1,128 +1,78 @@
 import { LitElement, html, css } from 'lit';
 
-const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class Project2cool4school extends LitElement {
   static properties = {
-    badgeTopTitle: {
-      type: String,
-      reflect: true,
-    },
-
-    badgePic: {
-      type: String,
-    },
-
-    badgeTitleName: {
-      type: String,
-      reflect: true,
-    },
-
-    badgeCreatorName: {
-      type: String,
-      reflect: true,
-    },
-  };
+      badgeTitle: { type: String },
+      badgeIcon: { type: String},
+      description: { type: String},
+      website: { type: String },
+      authorImage: { type: String },
+      author: { type: String},
+      time: { type: String},
+  }
 
   static styles = css`
-    main {
-      padding: 20px;
+    :host {
+      display: flex;
+      align-items: center;
     }
-    .badge-all {
-      display: block;
-      letter-spacing: 0.02em;
-      float: left;
-      height: 135px;
-      width: 280px;
-      cursor: pointer;
-      text-decoration: none;
-      position: relative;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 20px;
-      margin: 0 10px 10px 0;
-      background: transparent;
-      border: 1px solid #fff;
-      border-color: #3e98d3;
-      border-radius: 6px;
-    }
-    .badge-top {
-      background-color: #cfe6f4;
+    .badge{
+      border: 1px solid #3e98d3;
       border-left: 15px solid #3e98d3;
-      color: #333333;
-      font-weight: 400;
-      height: 2.25em;
-      line-height: 2.25em;
-      padding: 0 0.75em;
-    }
-    .badge-body {
-      border-left: 15px solid #3e98d3;
-      vertical-align: top;
-      padding: 10px 10px;
-      overflow: hidden;
-      position: relative;
-      font-weight: 400;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-    .badgepic {
-      float: right;
-      width: 60px;
-      height: 60px;
-      display: block;
-      background-size: contain;
-    }
-    .creator {
-      border-left: 15px solid #3e98d3;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      min-height: 30px;
-    }
-    .badge-creator-name {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      border-radius: 5px;
+      width: 1000px;
+      text-align: left;
+      margin: auto;
       margin-bottom: 5px;
-      margin-left: 10px;
-      margin-right: 15px;
-      font-weight: 400;
-      font-size: 13px;
+      font-family: "effra", sans-serif;
+    }
+    .image{
+      max-height: 40px;
+    }
+    .collapse-card {
+      background-color: #cfe6f4;
+      border-radius: 0px 5px 0px 0px;
+    }
+
+    .author{
+      border-radius: 50%;
     }
   `;
 
   constructor() {
     super();
-    this.badgeTopTitle = "Technology & Information";
-    this.badgePic =
-      "https://badgesapp.psu.edu/uploads/badge/image/337/APA_Style.png";
-    this.badgeTitleName = "APA Style Citations: Introduction";
-    this.badgeCreatorName = "Ethan Chen";
+    this.badgeTitle = "Amazon Cognito";
+    this.badgeIcon = "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png";
+    this.description = "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools"
+    this.website = "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html"
+    this.authorImage = "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png"
+    this.author = "Joshua Hantman"
+    this.time = "4.0 hours"
   }
 
   render() {
     return html`
-      <main>
-        <div class="badge-all">
-          <div class="badge-top">
-            <span class="badge-top-title">${this.badgeTopTitle}</span>
-          </div>
-          <div class="badge-body">
-            <div class="badge-image">
-              <img class="badgepic" src=${this.badgePic} alt="badge" />
+        <div class="badge">
+          <details>
+            <summary class="collapse-card"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
+            ${this.description}
+            <div>
+              <a href=${this.website}>${this.website}</a>
             </div>
-            <h3>${this.badgeTitleName}</h3>
-          </div>
-          <div class="creator">
-            <div class="badge-creator-name">
-              Creator: ${this.badgeCreatorName}
+            <div>
+            <p>--------------------------------------------------------------</p>
             </div>
-          </div>
+            <div>
+            <p>Badge Creator: </p> <img src=${this.authorImage} class="author" alt /> ${this.author}
+            </div>
+            <p>Approximate time to complete: </p> ${this.time}
+          </details>
         </div>
-      </main>
     `;
   }
 }
+
+
 
 customElements.define('project-2cool4school', Project2cool4school);

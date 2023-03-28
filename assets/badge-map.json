@@ -1,20 +1,29 @@
 [
     {
-        "badgeTopTitle": "Technology & Information",
-        "badgePic": "https://badgesapp.psu.edu/uploads/badge/image/337/APA_Style.png",
-        "badgeTitleName": "APA Style Citations: Introduction",
-        "badgeCreatorName": "Ethan Chen"
+        "badgeTitle": "Amazon Cognito",
+        "badgeIcon": "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png",
+        "description": "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools",
+        "website": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
+        "authorImage": "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png",
+        "author": "Joshua Hantman",
+        "time": "4.0 hours"
     },
     {
-        "badgeTopTitle": "Education",
-        "badgePic": "https://badgesapp.psu.edu/uploads/badge/image/692/icon125-color15.png",
-        "badgeTitleName": "IST Career Resources",
-        "badgeCreatorName": "Bryce Schneider"
+        "badgeTitle": "Amazon Cognito",
+        "badgeIcon": "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png",
+        "description": "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools",
+        "website": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
+        "authorImage": "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png",
+        "author": "Joshua Hantman",
+        "time": "4.0 hours"
     },
     {
-        "badgeTopTitle": "Professional Skills",
-        "badgePic": "https://badgesapp.psu.edu/uploads/badge/image/687/icon108-color16.png",
-        "badgeTitleName": "How to Self-Check For Colon Cancer",
-        "badgeCreatorName": "Micheal Gardner"
+        "badgeTitle": "Amazon Cognito",
+        "badgeIcon": "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png",
+        "description": "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools",
+        "website": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
+        "authorImage": "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png",
+        "author": "Joshua Hantman",
+        "time": "4.0 hours"
     }
 ]

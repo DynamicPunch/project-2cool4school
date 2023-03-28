@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import "./project-2cool4school";
+import "./project-2cool4school.js";
 
 export class Badges extends LitElement{
 
@@ -52,7 +52,7 @@ export class Badges extends LitElement{
         <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">
-                <badge-dashboard badgeTopTitle="${badge.badgeTopTitle}" badgePic="${badge.badgePic}" badgeTitleName="${badge.badgeTitleName}" badgeCreatorName="${badge.badgeCreatorName}"></badge-dashboard>
+                <project2-cool4school badgeTitle="${badge.badgeTitle}" badgeIcon="${badge.badgeIcon}" description="${badge.description}" website="${badge.website}" authorImage="${badge.authorImage}" author="${badge.author}" time="${badge.time}"></project2-cool4school>
             </div>
             `)}
         </div>
