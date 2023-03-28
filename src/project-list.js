@@ -13,6 +13,21 @@ export class Badges extends LitElement{
         }
     }
 
+    static get styles() {
+        return css`
+        :host {
+            display: block;
+        }
+        .wrapper {
+            display: flex;
+        }
+        .item {
+            display: inline-flex
+        }
+        `;
+    }
+
+
     constructor() {
         super();
         this.badges = [];
@@ -20,7 +35,7 @@ export class Badges extends LitElement{
     }
 
     updateRoster() {
-        const address = new URL('../assets/badge-map.json', import.meta.url).href;
+        const address = new URL('../assets/card-roster.json', import.meta.url).href;
         fetch(address).then((response) => {
             if (response.ok) {
                 return response.json()
@@ -32,21 +47,6 @@ export class Badges extends LitElement{
         });
     }
 
-    static get styles() {
-        return css`
-        :host {
-            display: block;
-            align-items: center;
-        }
-        .wrapper {
-            width: 400px;
-            display: flex;
-        }
-        .item {
-            display: inline-flex
-        }
-        `;
-    }
 
     render() {
         return html`
