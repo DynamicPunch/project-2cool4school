@@ -1,6 +1,5 @@
 import { LitElement, html, css } from 'lit';
 
-
 class Project2cool4school extends LitElement {
   static properties = {
       badgeTitle: { type: String },
@@ -10,6 +9,9 @@ class Project2cool4school extends LitElement {
       authorImage: { type: String },
       author: { type: String},
       time: { type: String},
+      text1: { type: String },
+      tex2: { type: String},
+      text3: { type: String},
   }
 
   static styles = css`
@@ -26,6 +28,8 @@ class Project2cool4school extends LitElement {
       margin: auto;
       margin-bottom: 5px;
       font-family: "effra", sans-serif;
+      font-size: 14px;
+
     }
     .image{
       max-height: 40px;
@@ -49,6 +53,10 @@ class Project2cool4school extends LitElement {
     this.authorImage = "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png"
     this.author = "Joshua Hantman"
     this.time = "4.0 hours"
+    this.text1 = "--------------------------------------------------------------"
+    this.text2 = "Badge Creator: "
+    this.text3 ="Approximate time to complete: "
+
   }
 
   render() {
@@ -62,19 +70,17 @@ class Project2cool4school extends LitElement {
               <a href=${this.website}>${this.website}</a>
             </div>
             <div>
-            <p>--------------------------------------------------------------</p>
+            ${this.text1}
             </div>
             <div>
-            <p>Badge Creator: </p> <img src=${this.authorImage} class="author" alt /> ${this.author}
+            ${this.text2} <img src=${this.authorImage} class="author" alt /> ${this.author}
             </div>
-            <p>Approximate time to complete: </p> ${this.time}
+            ${this.text3} ${this.time}
           </details>
         </div>
         </main>
     `;
   }
 }
-
-
 
 customElements.define('project-2cool4school', Project2cool4school);
