@@ -19,25 +19,30 @@ class Project2cool4school extends LitElement {
       display: flex;
       align-items: center;
     }
+
+    .collapseable {
+      background-color: #cfe6f4;
+      border-radius: 0px 5px 0px 0px;
+    }
+
+    .image{
+      max-height: 40px;
+    }
+
     .badge{
+      margin: auto;
+      margin-bottom: 5px;
       border: 1px solid #3e98d3;
       border-left: 15px solid #3e98d3;
       border-radius: 5px;
       width: 1000px;
       text-align: left;
-      margin: auto;
-      margin-bottom: 5px;
       font-family: "effra", sans-serif;
       font-size: 14px;
 
     }
-    .image{
-      max-height: 40px;
-    }
-    .collapse-card {
-      background-color: #cfe6f4;
-      border-radius: 0px 5px 0px 0px;
-    }
+
+
 
     .author{
       border-radius: 50%;
@@ -64,7 +69,7 @@ class Project2cool4school extends LitElement {
     <main>
         <div class="badge">
           <details>
-            <summary class="collapse-card"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
+            <summary class="collapseable"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
             ${this.description}
             <div>
               <a href=${this.website}>${this.website}</a>
