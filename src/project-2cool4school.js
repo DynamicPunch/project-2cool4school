@@ -1,88 +1,80 @@
 import { LitElement, html, css } from 'lit';
 
-const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class Project2cool4school extends LitElement {
   static properties = {
-    header: { type: String },
+      badgeTitle: { type: String },
+      badgeIcon: { type: String},
+      description: { type: String},
+      website: { type: String },
+      authorImage: { type: String },
+      author: { type: String},
+      time: { type: String},
   }
 
   static styles = css`
     :host {
-      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--project-2cool4school-background-color);
-    }
-
-    main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
       align-items: center;
     }
+    .badge{
+      border: 1px solid #3e98d3;
+      border-left: 15px solid #3e98d3;
+      border-radius: 5px;
+      width: 1000px;
+      text-align: left;
+      margin: auto;
+      margin-bottom: 5px;
+      font-family: "effra", sans-serif;
+    }
+    .image{
+      max-height: 40px;
+    }
+    .collapse-card {
+      background-color: #cfe6f4;
+      border-radius: 0px 5px 0px 0px;
+    }
 
-    .app-footer a {
-      margin-left: 5px;
+    .author{
+      border-radius: 50%;
     }
   `;
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.badgeTitle = "Amazon Cognito";
+    this.badgeIcon = "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png";
+    this.description = "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools"
+    this.website = "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html"
+    this.authorImage = "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png"
+    this.author = "Joshua Hantman"
+    this.time = "4.0 hours"
   }
 
   render() {
     return html`
-      <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
-
-        <p>Edit <code>src/Project2cool4school.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+    <main>
+        <div class="badge">
+          <details>
+            <summary class="collapse-card"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
+            ${this.description}
+            <div>
+              <a href=${this.website}>${this.website}</a>
+            </div>
+            <div>
+            <p>--------------------------------------------------------------</p>
+            </div>
+            <div>
+            <p>Badge Creator: </p> <img src=${this.authorImage} class="author" alt /> ${this.author}
+            </div>
+            <p>Approximate time to complete: </p> ${this.time}
+          </details>
+        </div>
+        </main>
     `;
   }
 }
+
+
 
 customElements.define('project-2cool4school', Project2cool4school);
