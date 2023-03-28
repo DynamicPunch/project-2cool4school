@@ -61,7 +61,7 @@ export class Badges extends LitElement{
         <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">
-                <project2-cool4school badgeTitle="${badge.badgeTitle}" badgeIcon="${badge.badgeIcon}" description="${badge.description}" website="${badge.website}" authorImage="${badge.authorImage}" author="${badge.author}" time="${badge.time}"></project2-cool4school>
+                <project-2cool4school badgeTitle="${badge.badgeTitle}" badgeIcon="${badge.badgeIcon}" description="${badge.description}" website="${badge.website}" authorImage="${badge.authorImage}" author="${badge.author}" time="${badge.time}"></project-2cool4school>
             </div>
             `)}
         </div>
