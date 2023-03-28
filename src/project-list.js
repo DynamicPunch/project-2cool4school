@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import "./project-2cool4school.js";
 
-export class Badges extends LitElement{
+export class List extends LitElement{
 
     static get tag() {
         return 'project-list';
@@ -60,6 +60,6 @@ export class Badges extends LitElement{
         `;
     }
 }
-customElements.define(Badges.tag, Badges);
+customElements.define(List.tag, List);
 
 
