@@ -20,7 +20,7 @@ class Project2cool4school extends LitElement {
       align-items: center;
     }
 
-    .collapseable {
+    .collapsible {
       background-color: #cfe6f4;
       border-radius: 0px 5px 0px 0px;
     }
@@ -68,7 +68,7 @@ class Project2cool4school extends LitElement {
     return html`
         <div class="badge">
           <details>
-            <summary class="collapseable"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
+            <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
             ${this.description}
             <div>
               <a href=${this.website}>${this.website}</a>
