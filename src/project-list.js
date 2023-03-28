@@ -15,15 +15,7 @@ export class Badges extends LitElement{
 
     constructor() {
         super();
-        this.badges = [    {
-            "badgeTitle": "Amazon Cognito",
-            "badgeIcon": "https://badgesapp.psu.edu/uploads/badge/image/623/Cognito.png",
-            "description": "Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools",
-            "website": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
-            "authorImage": "https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png",
-            "author": "Joshua Hantman",
-            "time": "4.0 hours"
-        }];
+        this.badges = [];
         this.updateRoster();
     }
 
@@ -61,7 +53,7 @@ export class Badges extends LitElement{
         <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">
-                <project2-cool4school badgeTitle="${badge.badgeTitle}" badgeIcon="${badge.badgeIcon}" description="${badge.description}" website="${badge.website}" authorImage="${badge.authorImage}" author="${badge.author}" time="${badge.time}"></project2-cool4school>
+                <project-2cool4school badgeTitle="${badge.badgeTitle}" badgeIcon="${badge.badgeIcon}" description="${badge.description}" website="${badge.website}" authorImage="${badge.authorImage}" author="${badge.author}" time="${badge.time}"></project-2cool4school>
             </div>
             `)}
         </div>
