@@ -66,7 +66,6 @@ class Project2cool4school extends LitElement {
 
   render() {
     return html`
-    <main>
         <div class="badge">
           <details>
             <summary class="collapseable"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
@@ -83,7 +82,6 @@ class Project2cool4school extends LitElement {
             ${this.text3} ${this.time}
           </details>
         </div>
-        </main>
     `;
   }
 }
