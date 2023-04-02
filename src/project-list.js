@@ -40,7 +40,6 @@ export class Badges extends LitElement{
         }
         .wrapper {
             width: 400px;
-            display: flex;
         }
         .item {
             display: inline-flex
