@@ -36,7 +36,7 @@ export class Badges extends LitElement{
         this.badges = [];
         this.updateRoster();
         this.filterSearch(this.badges, this.prompt);
-        this.prompt = "Amazon";
+        this.prompt = "";
         
     }
 
