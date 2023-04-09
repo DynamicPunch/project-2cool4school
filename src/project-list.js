@@ -36,12 +36,12 @@ export class Badges extends LitElement{
         this.badges = [];
         this.updateRoster();
         this.filterSearch(this.badges, this.prompt);
-        this.prompt = "Amazon";
+        this.prompt = "";
         
     }
 
     updateRoster() {
-        const address = "../assets/badge-roster.json";
+        const address = "../api/roster.js";
     fetch(address)
       .then((response) => {
         if (response.ok) {
