@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import "@lrnwebcomponents/simple-icon/simple-icon.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
+import "./search-bar";
 
 class Project2cool4school extends LitElement {
   static properties = {
@@ -63,8 +64,9 @@ class Project2cool4school extends LitElement {
     this.text1 = "--------------------------------------------------------------"
     this.text2 = "Badge Creator: "
     this.text3 ="Approximate time to complete: "
-
+    
   }
+
 
   render() {
     return html`
