@@ -12,10 +12,9 @@ export class Badges extends LitElement{
         return {
             badges: { type: Array },
             prompt: { type: String, reflect: true },
+            opened: { type: Boolean, reflect: true },
         }
     }
-
-
 
     static get styles() {
         return css`
@@ -37,9 +36,33 @@ export class Badges extends LitElement{
         this.updateRoster();
         this.filterSearch(this.badges, this.prompt);
         this.prompt = "";
-        
+        this.opened = false;
     }
 
+    toggleEvent(e) {
+      const state =
+        this.shadowRoot.querySelector("project-2cool4school").getAttribute("open") === ''
+          ? true
+          : false;
+      this.opened = state;
+    }
+  
+    updated(changedProperties) {
+      changedProperties.forEach((oldValue, propName) => {
+        if (propName === 'opened') {
+          this.dispatchEvent(
+            new CustomEvent('open-changed', {
+              composed: true,
+              bubbles: true,
+              canelable: false,
+              detail: {
+              value: this[propName]
+              },
+            })
+          );
+        }
+      });
+    }
     updateRoster() {
         const address = "../api/roster.js";
     fetch(address)
@@ -53,30 +76,7 @@ export class Badges extends LitElement{
         this.badges = data;
       });
   }
-    //     const address = new URL('../assets/badge-roster.json', import.meta.url).href;
-    //     fetch(address).then((response) => {
-    //         if (response.ok) {
-    //             return response.json()
-    //         }
-    //         return [];
-    //     })
-    //     .then((data) => {
-    //         this.badges = data;
-    //     });
-    // }
-    // searchThis(items, searchForThis){
-    //     return items.filter((thing) => 
-    //     {
-    //       for (var item in thing)
-    //       {
-    //         if (thing[item].toString().toLowerCase().includes(searchForThis.toLowerCase()))
-    //         {
-    //           return true;
-    //         }
-    //       }
-    //       return false;
-    //     });
-    // }
+
     filterSearch(items, prompt) {
         return items.filter((thing) => {
           for (var item in thing) {
@@ -102,7 +102,8 @@ export class Badges extends LitElement{
             
         ${this.filterSearch(this.badges, this.prompt).map(badge => html`
             <div class="item">
-            <project-2cool4school 
+            <project-2cool4school
+              .open="${this.opened}" @toggle="${this.toggleEvent}"
                 badgeTitle="${badge.badgeTitle}" 
                 badgeIcon="${badge.badgeIcon}" 
                 description="${badge.description}" 
