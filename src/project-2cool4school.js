@@ -48,7 +48,9 @@ class Project2cool4school extends LitElement {
       border-radius: 50%;
 
     }
-
+    .pad{
+      padding-top: 50px;
+    }
 
     .inlineRight {
       float: right;
@@ -61,7 +63,12 @@ class Project2cool4school extends LitElement {
     details > summary::-webkit-details-marker {
       display: none;
     }
-
+    .space{
+      padding-top: 25px;
+      padding-right: 25px;
+      padding-bottom: 25px;
+      padding-left: 25px;
+    }
 
   `;
 
@@ -87,17 +94,19 @@ class Project2cool4school extends LitElement {
           <details>
             <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle} <simple-icon class="inlineRight" accent-color="grey" icon="icons:expand-more">
             </simple-icon></summary>
+            <div class= "space">
             ${this.description}
             <div>
               <a href=${this.website}>${this.website}</a>
             </div>
             <div>
-            ${this.text1}
+            <p class="pad">${this.text1}</p>
             </div>
             <div>
             ${this.text2} <img src=${this.authorImage} class="author" alt /> ${this.author}
             </div>
             ${this.text3} ${this.time}
+            </div>
           </details>
         </div>
     `;
