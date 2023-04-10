@@ -42,13 +42,22 @@ class Project2cool4school extends LitElement {
       text-align: left;
       font-family: "effra", sans-serif;
       font-size: 14px;
+
+
+
+    .inlineRight {
+      float: right;
+
     }
-    .author{
-      border-radius: 50%;
-      max-height: 30px;
-      max-width: 40px
+
+    details > summary {
+      list-style: none;
     }
-    
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+
   `;
 
   constructor() {
@@ -71,7 +80,8 @@ class Project2cool4school extends LitElement {
     return html`
         <div class="badge">
           <details>
-            <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle}</summary>
+            <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle} <simple-icon class="inlineRight" accent-color="grey" icon="editor:expand-more">
+            </simple-icon></summary>
             ${this.description}
             <div>
               <a href=${this.website}>${this.website}</a>

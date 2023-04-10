@@ -64,7 +64,7 @@ update(changedProperties) {
               class="searchInput"
               type="text"
               id="search"
-              placeholder="Search Here Dog"
+              placeholder="Search Here Bro!"
               @input="${this.searchInput}"
             /> 
         </div>
