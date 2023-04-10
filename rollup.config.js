@@ -24,6 +24,7 @@ export default {
       injectServiceWorker: true,
       serviceWorkerPath: 'dist/sw.js',
     }),
+    //
     copy({
       targets: [
         {
