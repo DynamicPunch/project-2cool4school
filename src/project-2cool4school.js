@@ -44,10 +44,7 @@ class Project2cool4school extends LitElement {
       font-size: 14px;
 
     }
-
-
-
-    .author{
+    .authorImage{
       border-radius: 50%;
       max-height: 30px;
     }
