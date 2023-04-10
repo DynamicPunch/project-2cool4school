@@ -43,8 +43,6 @@ class Project2cool4school extends LitElement {
       font-family: "effra", sans-serif;
       font-size: 14px;
    
-
-      }
     }
 
 
