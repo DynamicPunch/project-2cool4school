@@ -54,13 +54,6 @@ class Project2cool4school extends LitElement {
       max-height: 30px;
     }
 
-    .text {
-      padding-top: 10px;
-      padding-right: 5px;
-      padding-bottom: 10px;
-      padding-left: 5px;
-
-    }
 
 
     .inlineRight {
