@@ -64,7 +64,7 @@ export class Badges extends LitElement{
       });
     }
     updateRoster() {
-        const address = "../api/roster.js";
+        const address = "../assets/badge-roster.json";
     fetch(address)
       .then((response) => {
         if (response.ok) {
