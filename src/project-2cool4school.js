@@ -42,6 +42,7 @@ class Project2cool4school extends LitElement {
       text-align: left;
       font-family: "effra", sans-serif;
       font-size: 14px;
+   
 
       }
     }
@@ -50,6 +51,14 @@ class Project2cool4school extends LitElement {
 
     .author{
       border-radius: 50%;
+    }
+
+    .text {
+      padding-top: 10px;
+      padding-right: 5px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+
     }
 
 
