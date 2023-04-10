@@ -42,7 +42,12 @@ class Project2cool4school extends LitElement {
       text-align: left;
       font-family: "effra", sans-serif;
       font-size: 14px;
+    }
+    .author{
+      max-height: 30px;
+      border-radius: 50%;
 
+    }
 
 
     .inlineRight {
@@ -80,7 +85,7 @@ class Project2cool4school extends LitElement {
     return html`
         <div class="badge">
           <details>
-            <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle} <simple-icon class="inlineRight" accent-color="grey" icon="editor:expand-more">
+            <summary class="collapsible"><img src=${this.badgeIcon} class="image" alt /> ${this.badgeTitle} <simple-icon class="inlineRight" accent-color="grey" icon="icons:expand-more">
             </simple-icon></summary>
             ${this.description}
             <div>
