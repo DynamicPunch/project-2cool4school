@@ -50,7 +50,7 @@ class Project2cool4school extends LitElement {
     }
     
   `;
-
+//
   constructor() {
     super();
     this.badgeTitle = "Amazon Cognito";
