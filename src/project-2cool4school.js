@@ -42,15 +42,6 @@ class Project2cool4school extends LitElement {
       text-align: left;
       font-family: "effra", sans-serif;
       font-size: 14px;
-   
-    }
-
-
-
-    .author{
-      border-radius: 50%;
-      max-height: 30px;
-    }
 
 
 
@@ -65,6 +56,7 @@ class Project2cool4school extends LitElement {
     details > summary::-webkit-details-marker {
       display: none;
     }
+
 
   `;
 
